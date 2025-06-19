@@ -12,6 +12,7 @@ ilovemen.Name = "ilovemen"
 ilovemen.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ilovemen.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 ilovemen.ResetOnSpawn = false
+ilovemen.IgnoreGuiInset = true
 
 ilovewomen.Name = "ilovewomen"
 ilovewomen.Parent = ilovemen
@@ -19,6 +20,7 @@ ilovewomen.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 ilovewomen.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ilovewomen.BorderSizePixel = 0
 ilovewomen.Size = UDim2.new(1, 0, 1, 0)
+ilovewomen.ZIndex = 999999999
 
 ilovepeople.Name = "ilovepeople"
 ilovepeople.Parent = ilovewomen
@@ -26,12 +28,13 @@ ilovepeople.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 ilovepeople.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ilovepeople.BorderSizePixel = 0
 ilovepeople.Size = UDim2.new(1, 0, 1, 0)
+ilovepeople.ZIndex = 999999999
 ilovepeople.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
 ilovepeople.ImageColor3 = Color3.fromRGB(106, 106, 106)
 
 -- Scripts:
 
-local function BMZR_script() -- ilovepeople.ilovealiens 
+local function CZOSKD_script() -- ilovepeople.ilovealiens 
 	local script = Instance.new('LocalScript', ilovepeople)
 
 	for _, i in ipairs(game.StarterGui:GetChildren()) do
@@ -270,4 +273,4 @@ local function BMZR_script() -- ilovepeople.ilovealiens
 	end
 	
 end
-coroutine.wrap(BMZR_script)()
+coroutine.wrap(CZOSKD_script)()
