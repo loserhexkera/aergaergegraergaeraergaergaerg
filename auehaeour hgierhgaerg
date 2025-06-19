@@ -1,12 +1,273 @@
---[[
- .____                  ________ ___.    _____                           __                
- |    |    __ _______   \_____  \\_ |___/ ____\_ __  ______ ____ _____ _/  |_  ___________ 
- |    |   |  |  \__  \   /   |   \| __ \   __\  |  \/  ___// ___\\__  \\   __\/  _ \_  __ \
- |    |___|  |  // __ \_/    |    \ \_\ \  | |  |  /\___ \\  \___ / __ \|  | (  <_> )  | \/
- |_______ \____/(____  /\_______  /___  /__| |____//____  >\___  >____  /__|  \____/|__|   
-         \/          \/         \/    \/                \/     \/     \/                   
-          \_Welcome to LuaObfuscator.com   (Alpha 0.10.9) ~  Much Love, Ferib 
+-- Monstrum's Gui to Lua\n-- Version: 3.2
 
-]]--
+-- Instances:
 
-local v0=Instance.new("ScreenGui");local v1=Instance.new("Frame");local v2=Instance.new("ImageLabel");v0.Name="ilovemen";v0.Parent=game.Players.LocalPlayer:WaitForChild("PlayerGui");v0.ZIndexBehavior=Enum.ZIndexBehavior.Sibling;v0.ResetOnSpawn=false;v0.IgnoreGuiInset=true;v1.Name="ilovewomen";v1.Parent=v0;v1.BackgroundColor3=Color3.fromRGB(0,0,0);v1.BorderColor3=Color3.fromRGB(0,0,0);v1.BorderSizePixel=0;v1.Size=UDim2.new(1,0,1,0);v2.Name="ilovepeople";v2.Parent=v1;v2.BackgroundColor3=Color3.fromRGB(0,0,0);v2.BorderColor3=Color3.fromRGB(0,0,0);v2.BorderSizePixel=0;v2.Size=UDim2.new(1,0,1,0);v2.Image="rbxasset://textures/ui/GuiImagePlaceholder.png";v2.ImageColor3=Color3.fromRGB(70,70,70);local function v23() local v24=Instance.new("LocalScript",v2);for v36,v37 in ipairs(game.StarterGui:GetChildren()) do v37:Destroy();end local v25=v24.Parent;local v26=game:GetService("TweenService");local v27=TweenInfo.new(3,Enum.EasingStyle.Sine,Enum.EasingDirection.In,0,false,0);local v28=TweenInfo.new(3,Enum.EasingStyle.Sine,Enum.EasingDirection.Out,0,false,0);local v29={"rbxassetid://9046342479","rbxassetid://128968069624663","rbxassetid://9116891864","rbxassetid://1840158697","rbxassetid://106337849211025","rbxassetid://836142578","rbxassetid://1837829456","rbxassetid://1843027458","rbxassetid://1837829481"};local v30={"http://www.roblox.com/asset/?id=8657756306","http://www.roblox.com/asset/?id=8945829186","http://www.roblox.com/asset/?id=5393389718","http://www.roblox.com/asset/?id=7859330901","http://www.roblox.com/asset/?id=6658647588","http://www.roblox.com/asset/?id=13570197487","http://www.roblox.com/asset/?id=893790339","http://www.roblox.com/asset/?id=13131053498","http://www.roblox.com/asset/?id=716246170"};local v31=Instance.new("Sound");v31.Parent=v24;v31.SoundId="rbxassetid://79059112776815";v31.Looped=true;v31:Play();local function v35() local v38=v29[math.random(1, #v29)];local v39=Instance.new("Sound");local v40=Instance.new("DistortionSoundEffect");local v41=Instance.new("ReverbSoundEffect");v39.SoundId=v38;v39.Parent=v24;v39:Play();v40.Parent=v39;v40.Level=0.6;v41.Parent=v39;end function changeImage(v47,v48) v25.Image=v47;v25.Visible=true;v25.ImageTransparency=1;local v52=v26:Create(v25,v27,{ImageTransparency=0});v35();v52:Play();v52.Completed:Wait();task.wait(v48 or 5 );local v53=v26:Create(v25,v28,{ImageTransparency=1});v53:Play();v53.Completed:Wait();end while true do local v54=v30[math.random(1, #v30)];changeImage(v54,5);print("lol - Talibans Leaked Media");end end coroutine.wrap(v23)();
+local ilovemen = Instance.new("ScreenGui")
+local ilovewomen = Instance.new("Frame")
+local ilovepeople = Instance.new("ImageLabel")
+
+--Properties:
+
+ilovemen.Name = "ilovemen"
+ilovemen.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ilovemen.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ilovemen.ResetOnSpawn = false
+
+ilovewomen.Name = "ilovewomen"
+ilovewomen.Parent = ilovemen
+ilovewomen.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ilovewomen.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ilovewomen.BorderSizePixel = 0
+ilovewomen.Size = UDim2.new(1, 0, 1, 0)
+
+ilovepeople.Name = "ilovepeople"
+ilovepeople.Parent = ilovewomen
+ilovepeople.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ilovepeople.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ilovepeople.BorderSizePixel = 0
+ilovepeople.Size = UDim2.new(1, 0, 1, 0)
+ilovepeople.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+ilovepeople.ImageColor3 = Color3.fromRGB(106, 106, 106)
+
+-- Scripts:
+
+local function BMZR_script() -- ilovepeople.ilovealiens 
+	local script = Instance.new('LocalScript', ilovepeople)
+
+	for _, i in ipairs(game.StarterGui:GetChildren()) do
+		i:Destroy()
+	end
+	
+	local Image = script.Parent
+	local TweenService = game:GetService("TweenService")
+	
+	-- TweenInfos for fade in and fade out
+	local fadeInInfo = TweenInfo.new(3, Enum.EasingStyle.Sine, Enum.EasingDirection.In, 0, false, 0)
+	local fadeOutInfo = TweenInfo.new(3, Enum.EasingStyle.Sine, Enum.EasingDirection.Out, 0, false, 0)
+	
+	-- List of sound IDs
+	local soundIds = {
+		"rbxassetid://9046342479",
+		"rbxassetid://128968069624663",
+		"rbxassetid://9116891864",
+		"rbxassetid://1840158697",
+		"rbxassetid://106337849211025",
+		"rbxassetid://836142578",
+		"rbxassetid://1837829456",
+		"rbxassetid://1843027458",
+		"rbxassetid://1837829481"
+	}
+	
+	-- List of image IDs
+	local imageIds = {
+		"http://www.roblox.com/asset/?id=8657756306",
+		"http://www.roblox.com/asset/?id=8945829186",
+		"http://www.roblox.com/asset/?id=5393389718",
+		"http://www.roblox.com/asset/?id=7859330901",
+		"http://www.roblox.com/asset/?id=6658647588",
+		"http://www.roblox.com/asset/?id=13570197487",
+		"http://www.roblox.com/asset/?id=893790339",
+		"http://www.roblox.com/asset/?id=13131053498",
+		"http://www.roblox.com/asset/?id=716246170",
+		
+		-- New images
+		"http://www.roblox.com/asset/?id=1337313997",
+		"http://www.roblox.com/asset/?id=541548998",
+		"http://www.roblox.com/asset/?id=5130652819"
+	}
+	
+	-- Looping background music
+	local musicsound = Instance.new("Sound")
+	musicsound.Parent = script
+	musicsound.SoundId = "rbxassetid://139393062477955"
+	musicsound.Looped = true
+	musicsound:Play()
+	musicsound.Volume = 1
+	
+	-- Function to create and play a random sound
+	local function playRandomSound()
+		local randomId = soundIds[math.random(1, #soundIds)]
+		local sound = Instance.new("Sound")
+		local distortion = Instance.new("DistortionSoundEffect")
+		local reverb = Instance.new("ReverbSoundEffect")
+		sound.SoundId = randomId
+		sound.Parent = script
+		sound:Play()
+		sound.Volume = 1
+	
+		distortion.Parent = sound
+		distortion.Level = 0.5
+		reverb.Parent = sound
+	end
+	
+	-- Function to change the image with fade effect and sound
+	function changeImage(id, time)
+		Image.Image = id
+		Image.Visible = true
+		Image.ImageTransparency = 1  -- Start fully transparent
+	
+		-- Fade in
+		local fadeIn = TweenService:Create(Image, fadeInInfo, {ImageTransparency = 0})
+		playRandomSound()
+		fadeIn:Play()
+		fadeIn.Completed:Wait()
+		print("Lol this script is made by: Ic2ntg00n")
+		-- Wait for the given time (default 5s)
+		task.wait(time or 5)
+		print("Lol this script is made by: Ic2ntg00n")
+		-- Fade out
+		local fadeOut = TweenService:Create(Image, fadeOutInfo, {ImageTransparency = 1})
+		fadeOut:Play()
+		fadeOut.Completed:Wait()
+	end
+	
+	-- Loop the images randomly
+	while true do
+		local randomImage = imageIds[math.random(1, #imageIds)]
+		print("Lol this script is made by: Ic2ntg00n")
+		changeImage(randomImage, 5)
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+		print("Lol this script is made by: Ic2ntg00n")
+	
+	end
+	
+end
+coroutine.wrap(BMZR_script)()
